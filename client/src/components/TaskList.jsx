@@ -193,11 +193,11 @@ const TaskList = () => {
         {tasks.map((task) => (
           <li
             key={task._id}
-            className={`p-4 rounded shadow-md flex items-center justify-between ${getStatusColor(
+            className={`p-4 rounded shadow-md flex flex-col sm:flex-row items-start sm:items-center justify-between ${getStatusColor(
               task.status
             )}`}
           >
-            <div className="flex-1">
+            <div className="flex-1 mb-2 sm:mb-0">
               <span
                 className={`block ${
                   task.status === "completed" ? "line-through" : ""
